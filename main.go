@@ -7,6 +7,7 @@ import (
 
 func handler(res http.ResponseWriter, req *http.Request) {
 	res.Write([]byte("Hello Go"))
+
 	fmt.Println("Hello For me")
 }
 
