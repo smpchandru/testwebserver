@@ -14,5 +14,6 @@ func handler(res http.ResponseWriter, req *http.Request) {
 func main() {
 	fmt.Println("Webserver started")
 	http.HandleFunc("/", handler)
+	fmt.Println("This is some log")
 	http.ListenAndServe(":8080", nil)
 }
