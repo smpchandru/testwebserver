@@ -13,5 +13,6 @@ func handler(res http.ResponseWriter, req *http.Request) {
 func main() {
 	fmt.Println("Webserver started")
 	http.HandleFunc("/", handler)
+	http.CheckThisisFine()
 	http.ListenAndServe(":8080", nil)
 }
