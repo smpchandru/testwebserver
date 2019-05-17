@@ -1,19 +1,16 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
+
+	_ "net/http/pprof"
+
+	"time"
 )
 
-func handler(res http.ResponseWriter, req *http.Request) {
-	res.Write([]byte("Hello Go"))
-
-	fmt.Println("Hello For me")
-}
+var Sleep = time.Sleep
 
 func main() {
-	fmt.Println("Webserver started")
-	http.HandleFunc("/", handler)
-	fmt.Println("This is some log")
-	http.ListenAndServe(":8080", nil)
+    http.ListenAndServe(addr, handler)
+    http.ListenAndServe(a)
 }
